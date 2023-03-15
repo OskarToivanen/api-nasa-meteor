@@ -20,4 +20,6 @@ app.get('/neows', async (req, res) => {
   }
 })
 
-app.listen(5000, () => console.log('Server started on port 5000'))
+app.listen(process.env.PORT || 5000, () =>
+  console.log('Server started on port 5000')
+)
