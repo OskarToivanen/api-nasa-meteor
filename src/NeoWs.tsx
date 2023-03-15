@@ -64,7 +64,7 @@ const NeoWs = () => {
       const formattedStartDate = new Date(startDate).toISOString().split('T')[0]
       const formattedEndDate = new Date(endDate).toISOString().split('T')[0]
       const response = await axios.get<NeoWsData>(
-        `http://localhost:5000/neows?start_date=${formattedStartDate}&end_date=${formattedEndDate}`
+        `https://nasa-meteor-api.herokuapp.com/neows?start_date=${formattedStartDate}&end_date=${formattedEndDate}`
       )
       const data = response.data
       setNeows(data)
